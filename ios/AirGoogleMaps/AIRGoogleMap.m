@@ -159,6 +159,7 @@ id regionAsJSON(MKCoordinateRegion region) {
   } else if ([subview isKindOfClass:[AIRGoogleMapOverlay class]]) {
     AIRGoogleMapOverlay *overlay = (AIRGoogleMapOverlay*)subview;
     overlay.overlay.map = self;
+    overlay.overlay.zIndex = atIndex;
     [self.overlays addObject:overlay];
   } else if ([subview isKindOfClass:[AIRGoogleMapHeatmap class]]){
     AIRGoogleMapHeatmap *heatmap = (AIRGoogleMapHeatmap*)subview;
